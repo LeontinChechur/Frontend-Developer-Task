@@ -1,6 +1,7 @@
 # Frontend Developer Task
 
 This application consists of two main pages:
+
 Page 1: Shows a table with mock data, including "names" and "fields". At the top, there is a search input allowing users to search for any row. A details section at the bottom of the page displays information from the selected row.
 
 Page 2: Displays a timeline of the patient's medical history, emphasizing the total allowed amounts for each date. It includes links to detailed procedure codes and diagnostic information.
@@ -53,7 +54,7 @@ Make sure you have the following software installed:
 1. Clone the repository:
 
    ```
-   gh repo clone LeontinChechur/Frontend-Developer-Task
+   git clone https://github.com/LeontinChechur/Frontend-Developer-Task.git
    ```
 2. Install dependencies:
 
@@ -91,7 +92,7 @@ frontend-developer-task/
 │   ├── components/       # React components
 │   ├── pages/       	  # React pages
 │   ├── shared/ 	  # Shared components
-│	├── const/	``# Routes constants
+│	├── const/	  # Routes constants
 │	├── data/	  # Mock data
 │	├── helpers/	  # Helpers functions
 │	├── interfaces/	  # All interfaces
