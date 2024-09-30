@@ -43,7 +43,7 @@ const columns = createColumns([
   "field30",
 ]);
 
-const DataGridPage1 = () => {
+const DataTablePage = () => {
   const [selectedRow, setSelectedRow] = useState<MockDataRow | null>(null);
   const [paginationModel, setPaginationModel] = useState({
     pageSize: 5,
@@ -68,4 +68,4 @@ const DataGridPage1 = () => {
   );
 };
 
-export default DataGridPage1;
+export default DataTablePage;
