@@ -1,5 +1,5 @@
 export const ROUTES = {
   MAIN: "/",
-  PAGE1: "/page1",
-  PAGE2: "/page2",
+  DATA_TABLE: "/data-table",
+  TIMELINE: "/timeline",
 };

@@ -26,20 +26,20 @@ export const Sidebar = () => {
     >
       <List>
         <ListItem
-          onClick={() => navigate(ROUTES.PAGE1)}
+          onClick={() => navigate(ROUTES.DATA_TABLE)}
           sx={{
-            color: location.pathname === ROUTES.PAGE1 ? "#1976d2" : "inherit",
+            color: location.pathname === ROUTES.DATA_TABLE ? "#1976d2" : "inherit",
           }}
         >
-          <ListItemText primary="Page 1" className="" />
+          <ListItemText primary="Data Table" className="" />
         </ListItem>
         <ListItem
-          onClick={() => navigate(ROUTES.PAGE2)}
+          onClick={() => navigate(ROUTES.TIMELINE)}
           sx={{
-            color: location.pathname === ROUTES.PAGE2 ? "#1976d2" : "inherit",
+            color: location.pathname === ROUTES.TIMELINE ? "#1976d2" : "inherit",
           }}
         >
-          <ListItemText primary="Page 2" />
+          <ListItemText primary="Patient Timeline" />
         </ListItem>
       </List>
     </Drawer>

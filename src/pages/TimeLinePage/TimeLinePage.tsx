@@ -1,8 +1,8 @@
 import { Timeline } from "../../components/TimeLine/TimeLine";
 
-import "./DataGridPage2.scss";
+import "./TimeLinePage.scss";
 
-const DataGridPage2 = () => {
+const TimeLinePage = () => {
   return (
     <div className="dataGridPage2">
       <Timeline />
@@ -10,4 +10,4 @@ const DataGridPage2 = () => {
   );
 };
 
-export default DataGridPage2;
+export default TimeLinePage;

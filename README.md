@@ -47,7 +47,7 @@ This project is a minimal setup to get React working in Vite with HMR (Hot Modul
 Make sure you have the following software installed:
 
 - [Node.js](https://nodejs.org/) (version 18 or higher)
-- [NMP]() (optional but recommended)
+- [NPM](https://www.npmjs.com/) (optional but recommended)
 
 ### Installation
 
