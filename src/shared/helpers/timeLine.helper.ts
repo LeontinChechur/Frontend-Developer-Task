@@ -63,11 +63,12 @@ export const processData = (data: Item[]) => {
   const groupedData: Record<string, any> = {};
 
   data.forEach((item) => {
-    const { dos_from, code, dx1, dx2 } = item;
+    const { dos_from, code, dx1, dx2, allowed } = item;
 
     if (!groupedData[dos_from]) {
       groupedData[dos_from] = {
         ...item,
+        allowed: 0,
         code: [],
         dx1: [],
         dx2: [],
@@ -84,6 +85,10 @@ export const processData = (data: Item[]) => {
 
     if (dx2 && !groupedData[dos_from].dx2.includes(dx2)) {
       groupedData[dos_from].dx2.push(dx2);
+    }
+
+    if (allowed) {
+      groupedData[dos_from].allowed += allowed;
     }
   });
 
@@ -119,3 +124,6 @@ export const getUniqueLabels = (
     return accumulator;
   }, []);
 };
+
+export const isOdd = (index: number): boolean => index % 2 === 0;
+

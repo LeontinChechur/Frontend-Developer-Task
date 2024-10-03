@@ -27,7 +27,6 @@ The current README.md file gives a simple overview of setting up a React project
 TO DO:
 
 - add unit test coverage
-- switch from Vertical\Horzintal in a click for Timeline
 
 # React + TypeScript + Vite Project
 
@@ -98,6 +97,7 @@ frontend-developer-task/
 │	├── interfaces/	  # All interfaces
 │	├── layouts/	  # Main layout
 │   ├── store/		  # Redux store with mock API
+│   ├── styles/		  # Logic and styles for dark/light theme
 │   ├── App.tsx           # Main app component
 │   ├── main.tsx          # Entry point for the application
 │   └── ...               # Other source files

@@ -1,4 +1,5 @@
 .data-grid {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -15,63 +16,74 @@
     &-search {
       width: 350px;
       height: 46px;
-      border-radius: 30px;
+      border: 1px solid var(--primary-border-color);
 
       input {
         padding: 10px 20px;
+        border: 1px solid var(--primary-border-color);
+        border-radius: 30px;
+        color: var(--text-color);
       }
 
       & .MuiOutlinedInput-root {
         border-radius: 30px;
       }
+    }
+  }
 
-      &:hover .MuiOutlinedInput-notchedOutline {
-        border-color: #1976d2;
+  .MuiDataGrid {
+    &-root {
+      border: none;
+      outline: none;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    &-columnHeader {
+      background-color: var(--primary-color);
+    }
+
+    &-columnHeaderTitle {
+      color: var(--common-white);
+      font-weight: bold;
+    }
+
+    &-footerContainer {
+      color: var(--text-color);
+    }
+
+    &-cell {
+      border: none;
+      outline: none;
+      transition: background-color 0.3s;
+      color: var(--text-color);
+    }
+
+    &-row {
+      &.even-row {
+        background-color: var(--table-cell-even);
       }
 
-      &:focus .MuiOutlinedInput-notchedOutline {
-        border-color: #1976d2;
+      &.odd-row {
+        background-color: var(--table-cell-odd);
       }
+    }
+
+    &-virtualScrollerContent {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
     }
   }
 
   &__content {
     height: 60vh;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-border-color);
     border-radius: 10px;
     cursor: pointer;
-
-    .MuiDataGrid-row{
-      &.even-row {
-        background-color: #f5f5f5;
-      }
-
-      &.odd-row {
-        background-color: #ffffff;
-      }
-    }
   }
-  
+
   &__details {
     height: 30vh;
-  }
-
-  .MuiDataGrid-root {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-
-    .MuiDataGrid-virtualScrollerContent {
-      display: grid;
-      grid-template-columns: repeat(15, 1fr);
-    }
-  }
-}
-
-.css-1wh4eh7-MuiDataGrid-root .MuiDataGrid {
-  &-columnHeader:focus-within,
-  &-cell:focus-within {
-    outline: none;
-    border: none;
   }
 }

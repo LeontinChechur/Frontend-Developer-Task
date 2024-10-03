@@ -12,3 +12,4 @@ export const AppRoutes = createRoutesFromElements(
     <Route path={ROUTES.TIMELINE} element={<TimeLinePage />} />
   </Route>
 );
+

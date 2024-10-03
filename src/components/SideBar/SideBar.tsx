@@ -1,44 +1,50 @@
+
 import { useNavigate, useLocation } from "react-router-dom";
-import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
+import TableChartIcon from "@mui/icons-material/TableChart";
+import TimelineIcon from "@mui/icons-material/Timeline";
+import classnames from "classnames";
 
 import { ROUTES } from "../../shared/const/router";
+
+import "./SideBar.scss";
 
 export const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const isActive = (route: string) => location.pathname === route;
+
   return (
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: "200px",
-        flexShrink: 0,
-        position: "static",
-        cursor: "pointer",
-        border: "1px solid #ddd",
-        "& .MuiDrawer-paper": {
-          width: "200px",
-          top: "75px",
-          boxSizing: "border-box",
-          position: "fixed",
-        },
-      }}
-    >
+    <Drawer variant="permanent" className="drawer">
       <List>
         <ListItem
           onClick={() => navigate(ROUTES.DATA_TABLE)}
-          sx={{
-            color: location.pathname === ROUTES.DATA_TABLE ? "#1976d2" : "inherit",
-          }}
+          className={classnames("listItem", { active: isActive(ROUTES.DATA_TABLE) })}
         >
-          <ListItemText primary="Data Table" className="" />
+          <ListItemIcon
+            className={classnames("listItemIcon", { active: isActive(ROUTES.DATA_TABLE) })}
+          >
+            <TableChartIcon />
+          </ListItemIcon>
+          <ListItemText primary="Data Table" />
         </ListItem>
+
         <ListItem
           onClick={() => navigate(ROUTES.TIMELINE)}
-          sx={{
-            color: location.pathname === ROUTES.TIMELINE ? "#1976d2" : "inherit",
-          }}
+          className={classnames("listItem", { active: isActive(ROUTES.TIMELINE) })}
         >
+          <ListItemIcon
+            className={classnames("listItemIcon", { active: isActive(ROUTES.TIMELINE) })}
+          >
+            <TimelineIcon />
+          </ListItemIcon>
           <ListItemText primary="Patient Timeline" />
         </ListItem>
       </List>
