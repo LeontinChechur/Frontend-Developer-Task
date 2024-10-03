@@ -1,37 +1,48 @@
-:root {
-    --primary-color: #468ba6
-    --secondary-color: #e3f2fd;     
-    --background-content: #ffffff;
-    --primary-border-color: #dddd;
-    --common-black: #000;
-    --success-color: #46c70f;
-    --warning-color: #f56560;
-    --common-white: #fff;
-  }
-  
-  [data-theme='light'] {
-    --primary-color: #468ba6;
-    --secondary-color: #e3f2fd;
-    --hover-color: #f0f0f0;
-    --background-content: #ffffff;
-    --primary-border-color: #dddd;
-    --text-color: #000;
-    --table-cell-odd: #fff;
-    --table-cell-even: #f5f5f5;
-    --content-background: #fff;
-    --link-color: #468ba6;
-  }
-  
-  [data-theme='dark'] {
-    --primary-color: #468ba6;
-    --secondary-color: #1e1e1e;
-    --hover-color: #424242;
-    --background-content: #285059;
-    --primary-border-color: #dddd;
-    --text-color: #FFFFF0;
-    --table-cell-odd: #2e2d2d;
-    --table-cell-even: #1c1b1b;
-    --content-background: #2e2d2d;
-    --link-color: #36a5d1;
-  }
-  
+$underwater-moonlight: #468ba6;
+$wizard-white: #e3f2fd;
+$steam: #dddd;
+$common-black: #000;
+$harlequin-green: #46c70f;
+$diluno-red: #f56560;
+$common-white: #fff;
+$snowflake: #f0f0f0;
+$white-smoke: #f5f5f5;
+$dynamic-black: #1e1e1e;
+$black-panther: #424242;
+$atlantic-deep: #285059;
+$ivory: #fffff0;
+$carbon-fiber: #2e2d2d;
+$modal: #36a5d1;
+$eerie-black: #1c1b1b;
+
+[data-theme="light"] {
+  --primary-color: #{$underwater-moonlight};
+  --secondary-color: #{$wizard-white};
+  --hover-color: #{$snowflake};
+  --background-content: #{$common-white};
+  --primary-border-color: #{$steam};
+  --text-color: #{$common-black};
+  --table-cell-odd: #{$common-white};
+  --table-cell-even:#{$white-smoke};
+  --content-background: #{$common-white};
+  --link-color: #{$underwater-moonlight};
+  --warning-color: #{$diluno-red};
+  --common-white: #{$common-white};
+  --common-black: #{$common-black};
+}
+
+[data-theme="dark"] {
+  --primary-color: #{$underwater-moonlight};
+  --secondary-color: #{$dynamic-black};
+  --hover-color: #{$black-panther};
+  --background-content: #{$atlantic-deep};
+  --primary-border-color: #{$steam};
+  --text-color: #{$ivory};
+  --table-cell-odd: #{$carbon-fiber};
+  --table-cell-even: #{$eerie-black};
+  --content-background: #{$carbon-fiber};
+  --link-color: #{$modal};
+  --warning-color: #{$diluno-red};
+  --common-white: #{$common-white};
+  --common-black: #{$common-black};
+}
