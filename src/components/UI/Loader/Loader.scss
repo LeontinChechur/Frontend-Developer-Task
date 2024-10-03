@@ -1,0 +1,23 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  div {
+    min-height: 200px;
+    text-align: center;
+  }
+
+  path {
+    stroke-dasharray: 250;
+    stroke-dashoffset: 0;
+    animation: dash 2s linear infinite forwards;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 500;
+    }
+  }
+}

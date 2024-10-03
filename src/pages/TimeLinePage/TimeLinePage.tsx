@@ -4,7 +4,7 @@ import "./TimeLinePage.scss";
 
 const TimeLinePage = () => {
   return (
-    <div className="dataGridPage2">
+    <div className="timeLinePage">
       <Timeline />
     </div>
   );

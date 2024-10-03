@@ -1,0 +1,13 @@
+.topPanel {
+    display: flex;
+    padding: 0px 30px;
+    background-color: var(--primary-color) !important;
+
+    &-switcher {
+        margin-left: auto;
+    }
+
+    span {
+        cursor: pointer;
+    }
+}

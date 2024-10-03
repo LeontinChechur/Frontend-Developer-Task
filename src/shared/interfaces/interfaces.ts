@@ -10,6 +10,13 @@ export interface ClientDataState {
   data: Item[];
 }
 
+export interface ButtonProps {
+  title?: string;
+  onClick?: () => void;
+  disabled?: boolean;
+  className?: string;
+}
+
 export interface RootState {
   clientData: ClientDataState;
 }
@@ -38,6 +45,10 @@ export interface DataGridColumnConfig {
   setSearchQuery?: (query: string) => void;
 }
 
+export interface ViewButton {
+  isHorizontal: boolean;
+}
+
 export interface Item {
   id: number | string;
   dob: string;
@@ -60,21 +71,22 @@ export interface Item {
 
 export interface MockDataRow {
   id: number;
-  name: string;
-  field1: string;
-  field2: string;
-  field3: string;
-  field4: string;
-  field5: string;
-  field6: string;
-  field7: string;
-  field8: string;
-  field9: string;
-  field10: string;
-  field11: string;
-  field12: string;
-  field13: string;
-  field14: string;
+  dob: string;
+  gender: string;
+  billing_class: string;
+  patient_id: number;
+  line: number;
+  dos_from: string;
+  code: number;
+  units: number;
+  charges: number;
+  allowed: number;
+  benefit: number;
+  copay: number;
+  revcode: string;
+  rend_provider_id: number;
+  dx1: string;
+  dx2: string;
   field15: string;
   field16: string;
   field17: string;
